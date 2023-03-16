@@ -3,11 +3,136 @@ import "../styles/global.css";
 import Our_main from "../layouts/Our_main.astro";
 ---
 
-<Our_main title="About">
-  <img src="../public/img/art.webp" alt="" />
-  <p>
-    Being at KUNE Festival is an immersive experience that blends art, music, and the island’s natural beauty. The location’s secludedness adds to the sense of separation from everyday life. At the same time, the art invites us to engage in open
-    discussions and imagine a world that can be different, making a positive impact over our mentality and worldview. In conjunction with the art, the music creates a holistic cultural experience representative of the modern, young Nordic artistic
-    community.
-  </p>
-</Our_main>
+<Our_main />
+<body>
+  <h1>About</h1>
+  <img class="arrow" src="../public/img/arrow.svg" alt="" />
+  <section class="grid_1-1 orange">
+    <p class="tekst_1">
+      Being at KUNE Festival is an immersive experience that blends art, music, and the island’s natural beauty. The location’s secludedness adds to the sense of separation from everyday life. At the same time, the art invites us to engage in open
+      discussions and imagine a world that can be different, making a positive impact over our mentality and worldview. In conjunction with the art, the music creates a holistic cultural experience representative of the modern, young Nordic artistic
+      community.
+    </p>
+    <img class="billede1" src="../public/img/night_time.webp" alt="night time dj" />
+  </section>
+  <br />
+  <section class="grid_1-1 rosa">
+    <img class="billede2" src="../public/img/yoga.webp" alt="yoga" />
+    <p class="tekst_2">
+      Most importantly, we strive to build an environment that values and celebrates what we call the ‘Otherness’ of the world. The Otherness is a concept that acknowledges the existence of people who may be similar to us in many ways yet possess
+      traits, values, and characteristics that set them apart as “other.” Humans share a great deal in common, but we are also remarkably diverse regarding cultural or social norms, habits, or behavior. The Otherness element recognizes this diversity
+      and encourages us to acknowledge, appreciate, and celebrate our differences. By embracing the Otherness, we create a more inclusive, compassionate, and open- minded world. Rather than viewing differences as a source of conflict or division, we
+      recognize them as a source of strength and beauty. The Otherness element invites us to see the world through the eyes of others, to listen to their stories, and to appreciate their unique perspectives. In doing so, we expand our horizons and
+      gain a more complex understanding of what it means to be human.
+    </p>
+  </section>
+  <br />
+
+  <section class="grid_1-1 orange">
+    <p class="tekst_3">
+      On the more practical side of things, KUNE Festival is an NGO made up of over 30 passionate and dedicated individuals who work voluntarily year-round to create this extraordinary experience. Our team is comprised of artists, musicians,
+      designers, writers, project managers, and cultural enthusiasts, all united by our shared vision and values. We are motivated by the belief that art and culture have the power to create positive change in the world, and we are committed to
+      working towards this goal by creating a unique platform that celebrates the Nordic underground talent. Our team is inspired by the creative community that we are building, and we are continually amazed by the skills and dedication of our
+      members.
+    </p>
+    <img class="billede3" src="../public/img/crew.webp" alt="crew" />
+  </section>
+  <br />
+  <img class="billede4" src="../public/img/art.webp" alt="art installation" />
+  <br />
+  <section class="location">
+    <h2>Location</h2>
+    <div class="grid_1-1 rosa">
+      <div class="location_tekst">
+        <p>
+          The island is a decommissioned defense fort built in the 19th century. A unique landmark with historical value, the fort-island was recently renovated and repurposed into a place dedicated to young people and innovative cultural
+          initiatives. It can host 2500 people, 1000 of which could be accommodated in the camping area.
+        </p>
+        <br />
+        <p>
+          Traveling to KUNE Festival by boat for a 30-minute journey to an island location adds a unique and significant element to the festival experience. Reaching the festival site by boat separates us from our everyday lives and creates a sense
+          of escape to a new world. The festival island becomes a self- contained microcosm where everyone is living, breathing, and experiencing the festival together. This close-knit community setting creates a petri dish for social interactions,
+          where we can connect and bond in a way that is impossible in our everyday lives.
+        </p>
+        <br />
+        <p>
+          This unique location provides a striking contrast between its historical purpose of aggression and its current function as a hub for a cultural celebration. The island’s transformation into a place dedicated to youth and innovative cultural
+          initiatives highlights the shift from conflict to community and symbolizes hope and possibility. By hosting the festival on this historic site, we aim to offer a powerful reminder of the positive impact art and culture can have on society
+          and their role in bringing people together and fostering understanding and connection.
+        </p>
+      </div>
+      <img class="billede5" src="../public/img/island.webp" alt="ungdomsøen" />
+    </div>
+  </section>
+
+  <br />
+</body>
+<style>
+  section {
+    max-width: 90%;
+    margin-inline: auto;
+  }
+  h1 {
+    color: var(--one);
+    text-align: center;
+    padding-top: 5%;
+  }
+
+  .arrow {
+    width: 5%;
+    margin-inline: auto;
+    padding-bottom: 5%;
+  }
+  .grid_1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .orange {
+    background-color: var(--four);
+    padding: 5%;
+  }
+
+  .rosa {
+    background-color: var(--five);
+    padding: 5%;
+  }
+
+  .tekst_1 {
+    width: 90%;
+    margin-top: 15%;
+  }
+
+  .tekst_2 {
+    width: 90%;
+    margin-left: 5%;
+  }
+
+  .tekst_3 {
+    width: 90%;
+  }
+  .billede4 {
+    width: 90%;
+    margin-inline: auto;
+  }
+
+  .billede5 {
+    width: 90%;
+    margin-inline: auto;
+    margin-top: 20%;
+  }
+
+  .location {
+    background-color: var(--five);
+  }
+  h2 {
+    text-align: center;
+    padding-bottom: 2%;
+    padding-top: 2%;
+  }
+
+  .location_tekst {
+    width: 90%;
+    margin-left: 5%;
+  }
+</style>

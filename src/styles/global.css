@@ -86,6 +86,10 @@ p {
   font-size: var(--font-size-base);
 }
 
+a {
+  text-decoration: none;
+}
+
 img {
   width: 100%;
   height: auto;

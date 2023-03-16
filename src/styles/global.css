@@ -1,0 +1,93 @@
+:root {
+  /* Farver */
+  --one: #ee6236;
+  --two: #ee8334;
+  --three: #e9a73f;
+  --four: #dc8454;
+  --five: #d36864;
+  --six: #ca4f72;
+  --seven: #b4477a;
+  --eight: #924482;
+  --nine: #824285;
+  --ten: #743b83;
+  --eleven: #6f4089;
+  --twelve: #513d90;
+
+  /* Tekst farven på undersiderne */
+  --white: #ffffff;
+  /* Farven på undersiderne og teksten på forsiden */
+  --cream-white: #faf0e6;
+  /* Den sorte farve på siden */
+  --black: #252525;
+
+  /* Typografi */
+  --font-size-h1: 3rem;
+  --font-size-h2: 2.5rem;
+  --font-size-h3: 2rem;
+  --font-size-h4: 1.5rem;
+  --font-size-base: 1rem;
+  --font-size-small: 0.8rem;
+  --font-size-tiny: 0.5rem;
+
+  /* Spacing */
+  --space-xxxs: 5px;
+  --space-xxs: 10px;
+  --space-xs: 15px;
+  --space-m: 20px;
+  --space-l: 25px;
+  --space-xl: 30px;
+  --space-xxl: 40px;
+  --space-xxl: 50px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--cream-white);
+}
+
+body {
+  height: 100%;
+  line-height: 1.6;
+  color: var(--white);
+  font-family: "montserrat", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "h1 font";
+  src: url("/Dance.woff2") format("woff2");
+}
+
+h1 {
+  font-family: "h1 font";
+  letter-spacing: 2px;
+  font-size: var(--font-size-h1);
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+}
+
+h3 {
+  font-size: var(--font-size-h3);
+}
+
+h4 {
+  font-size: var(--font-size-h4);
+}
+
+p {
+  font-size: var(--font-size-base);
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}

@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import Our_main from "../layouts/Our_main.astro";
+import Button from "../components/Button.astro";
 ---
 
 <Our_main>
@@ -61,7 +62,12 @@ import Our_main from "../layouts/Our_main.astro";
             on society and their role in bringing people together and fostering understanding and connection.
           </p>
         </div>
-        <img class="billede5" src="../public/img/island.webp" alt="ungdomsøen" />
+        <div class="grid_1">
+          <img class="billede5" src="../public/img/island.webp" alt="ungdomsøen" />
+          <div class="mapButton">
+            <Button variant="secondary">Map</Button>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -101,7 +107,7 @@ import Our_main from "../layouts/Our_main.astro";
 
   .tekst_1 {
     width: 90%;
-    margin-top: 15%;
+    margin-top: 5%;
   }
 
   .tekst_2 {
@@ -121,6 +127,7 @@ import Our_main from "../layouts/Our_main.astro";
     width: 90%;
     margin-inline: auto;
     margin-top: 20%;
+    margin-bottom: 0%;
   }
 
   .location {
@@ -136,8 +143,16 @@ import Our_main from "../layouts/Our_main.astro";
     width: 90%;
     margin-left: 5%;
   }
+  .grid_1 {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 
-  @media (max-width: 900px) {
+  .mapButton {
+    margin-inline: auto;
+  }
+
+  @media (max-width: 1200px) {
     .grid_1-1 {
       display: grid;
       grid-template-columns: 1fr;
@@ -157,7 +172,9 @@ import Our_main from "../layouts/Our_main.astro";
       margin-bottom: 5%;
       margin-inline: auto;
     }
-
+    .billede5 {
+      margin-bottom: 5%;
+    }
     h2 {
       font-size: 2.5rem;
     }

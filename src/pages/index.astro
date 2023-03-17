@@ -1,10 +1,77 @@
 ---
 import "../styles/global.css";
 import Our_main from "../layouts/Our_main.astro";
+import Button from "../components/Button.astro";
 ---
 
-<Our_main title="KUNE festival" />
-<body>
+<Our_main title="Kune Festival">
+  <section class="sec_1">
+    <div class="container">
+      <img src="/svg/sun.svg" class="sun" alt="" />
+      <div class="center">
+        <h1>Kune festival</h1>
+        <h2>19-23 July</h2>
+      </div>
+      <div class="center-arrow">
+        <img src="/img/arrow-white.svg" class="arrow" alt="White arrow" />
+      </div>
+    </div>
+  </section>
+
+  <section class="sec_2">
+    <img src="/svg/hill-pink.svg" class="hill-pink" alt="" />
+    <img src="/svg/hill-yellow.svg" class="hill-yellow" alt="" />
+  </section>
+
+  <section class="sec_3">
+    <p>
+      A 5-day electronic music festival that takes place on an island 30 minutes away from Copenhagen. A one-of-its- kind celebration of the Scandinavian underground culture. A playground with five stages, two art galleries, and multiple art
+      installations. An intimate, holistic experience with access to a camping ground, food area, dipping spot, and unique sunsets. A true hidden gem.
+    </p>
+    <div class="button">
+      <Button variant="secondary">Buy ticket</Button>
+    </div>
+    <div class="arrow-text">
+      <img src="/img/arrow-white.svg" class="arrow" alt="" />
+    </div>
+  </section>
+
+  <section class="sec_4">
+    <img src="/svg/hill-lightpink.svg" class="hill-lightpink" alt="" />
+  </section>
+
+  <section class="sec_5">
+    <div class="gradient_1"></div>
+    <div class="grid_1-1">
+      <div class="">
+        <h3>Tickets</h3>
+        <p>Get your tickets for KUNE festival 2023 here. <i class="fa-solid fa-arrow-right"></i></p>
+      </div>
+      <div class="ticket-logo">
+        <a href="#"><img src="/svg/ticket.svg" class="ticket" alt="" /></a>
+      </div>
+    </div>
+    <div class="gradient_2"></div>
+  </section>
+
+  <section class="sec_6">
+    <div class="gradient_3"></div>
+    <div class="grid_1-1-order">
+      <div class="tent-logo">
+        <a href="#"><img src="/svg/hill-tent.svg" class="tent" alt="" /></a>
+      </div>
+      <div class="tent-text">
+        <h3>Camping</h3>
+        <p>
+          Make sure you have a camping spot for this years festival. <br />
+          Click on the tents to book. <br />
+          Remember to tell your friends too!
+        </p>
+      </div>
+    </div>
+    <div class="gradient_4"></div>
+  </section>
+
   <style>
     h1,
     h2,
@@ -13,5 +80,140 @@ import Our_main from "../layouts/Our_main.astro";
     p {
       color: var(--cream-white);
     }
+    .sec_1 {
+      background: var(--one);
+      margin-top: 100px;
+    }
+
+    .sun {
+      width: 50%;
+      height: auto;
+    }
+
+    .arrow {
+      width: 100px;
+      height: auto;
+    }
+
+    .container {
+      position: relative;
+      text-align: center;
+
+      display: flex;
+      justify-content: center;
+    }
+
+    .center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .center-arrow {
+      position: absolute;
+      top: 70%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .sec_2 {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .sec_2 img {
+      width: 40%;
+      height: auto;
+    }
+
+    .hill-yellow {
+      float: inline-end;
+    }
+
+    .sec_3 {
+      max-width: 800px;
+      margin-inline: auto;
+    }
+
+    .button {
+      text-align: center;
+      margin-block: var(--space-xxl);
+    }
+
+    .arrow-text {
+      display: flex;
+      justify-content: center;
+    }
+    .sec_4 {
+      margin-top: -215px;
+      display: flex;
+      justify-content: flex-end;
+    }
+    .sec_4 img {
+      width: 40%;
+      height: auto;
+    }
+
+    .sec_5 {
+      background: var(--two);
+    }
+
+    .gradient_1 {
+      padding: 50px;
+      background-image: linear-gradient(var(--one), var(--two));
+    }
+
+    .gradient_2 {
+      padding: 50px;
+      background-image: linear-gradient(var(--two), var(--three));
+    }
+
+    .grid_1-1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      max-width: 1000px;
+      margin-inline: auto;
+      padding-block: 20px;
+    }
+
+    .ticket {
+      width: 70%;
+      height: auto;
+    }
+
+    .ticket-logo {
+      display: flex;
+      justify-content: center;
+    }
+
+    .gradient_3 {
+      padding: 50px;
+      background-image: linear-gradient(var(--), var(--two));
+    }
+
+    .gradient_4 {
+      padding: 50px;
+      background-image: linear-gradient(var(--two), var(--three));
+    }
+    .grid_1-1-order {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      margin-inline: auto;
+      padding-block: 20px;
+    }
+
+    .tent {
+      width: 70%;
+      height: auto;
+    }
+
+    .tent-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
   </style>
-</body>
+</Our_main>

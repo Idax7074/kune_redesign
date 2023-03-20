@@ -32,7 +32,7 @@ import Button from "../components/Button.astro";
       <Button variant="secondary">Buy ticket</Button>
     </div>
     <div class="arrow-text">
-      <img src="/img/arrow-white.svg" class="arrow" alt="" />
+      <img src="/img/arrow-white.svg" class="arrow-white" alt="" />
     </div>
   </section>
 
@@ -43,7 +43,7 @@ import Button from "../components/Button.astro";
   <section class="sec_5">
     <div class="gradient_1"></div>
     <div class="grid_1-1">
-      <div class="">
+      <div class="ticket-text">
         <h3>Tickets</h3>
         <p>Get your tickets for KUNE festival 2023 here. <i class="fa-solid fa-arrow-right"></i></p>
       </div>
@@ -55,8 +55,7 @@ import Button from "../components/Button.astro";
   </section>
 
   <section class="sec_6">
-    <div class="gradient_3"></div>
-    <div class="grid_1-1-order">
+    <div class="grid_1-1">
       <div class="tent-logo">
         <a href="#"><img src="/svg/hill-tent.svg" class="tent" alt="" /></a>
       </div>
@@ -69,7 +68,55 @@ import Button from "../components/Button.astro";
         </p>
       </div>
     </div>
+    <div class="gradient_3"></div>
+  </section>
+
+  <section class="sec_7">
+    <div class="grid_1-1">
+      <div class="bottle-text">
+        <h3>Rules</h3>
+        <p>
+          At KUNE Festival we have a few rules to make sure everyone has a good time. <br />
+          Click on the bottles to read about our rules and values.
+        </p>
+      </div>
+      <div class="bottle-logo">
+        <a href="#"><img src="/svg/hill-bottle.svg" class="bottle" alt="" /></a>
+      </div>
+    </div>
     <div class="gradient_4"></div>
+  </section>
+
+  <section class="sec_8">
+    <div class="grid_1-1">
+      <div class="people-logo">
+        <a href="#"><img src="/svg/hill-people.svg" class="people" alt="" /></a>
+      </div>
+      <div class="people-text">
+        <h3>Rules</h3>
+        <p>
+          At KUNE Festival we have a few rules to make sure everyone has a good time. <br />
+          Click on the bottles to read about our rules and values.
+        </p>
+      </div>
+    </div>
+    <div class="gradient_5"></div>
+  </section>
+
+  <section class="sec_9">
+    <div class="grid_1-1">
+      <div class="waves-text">
+        <h3>Rules</h3>
+        <p>
+          At KUNE Festival we have a few rules to make sure everyone has a good time. <br />
+          Click on the bottles to read about our rules and values.
+        </p>
+      </div>
+      <div class=""></div>
+    </div>
+    <div class="waves-logo">
+      <a href="#"><img src="/svg/waves.svg" class="waves" alt="" /></a>
+    </div>
   </section>
 
   <style>
@@ -92,6 +139,11 @@ import Button from "../components/Button.astro";
 
     .arrow {
       width: 100px;
+      height: auto;
+    }
+
+    .arrow-white {
+      width: 70px;
       height: auto;
     }
 
@@ -173,7 +225,6 @@ import Button from "../components/Button.astro";
       display: grid;
       grid-template-columns: 1fr 1fr;
 
-      max-width: 1000px;
       margin-inline: auto;
       padding-block: 20px;
     }
@@ -183,26 +234,29 @@ import Button from "../components/Button.astro";
       height: auto;
     }
 
+    .ticket:hover {
+      opacity: 0.8;
+    }
+
+    .ticket-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
     .ticket-logo {
       display: flex;
       justify-content: center;
     }
 
+    .sec_6 {
+      background-color: var(--three);
+    }
+
     .gradient_3 {
       padding: 50px;
-      background-image: linear-gradient(var(--), var(--two));
-    }
-
-    .gradient_4 {
-      padding: 50px;
-      background-image: linear-gradient(var(--two), var(--three));
-    }
-    .grid_1-1-order {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-
-      margin-inline: auto;
-      padding-block: 20px;
+      background-image: linear-gradient(var(--three), var(--four));
     }
 
     .tent {
@@ -210,9 +264,96 @@ import Button from "../components/Button.astro";
       height: auto;
     }
 
+    .tent:hover {
+      opacity: 0.8;
+    }
+
     .tent-text {
       display: flex;
       flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .sec_7 {
+      background-color: var(--four);
+    }
+
+    .gradient_4 {
+      padding: 50px;
+      background-image: linear-gradient(var(--four), var(--five));
+    }
+
+    .bottle {
+      width: 200%;
+      height: auto;
+    }
+
+    .bottle:hover {
+      opacity: 0.8;
+    }
+
+    .bottle-logo {
+      display: flex;
+      justify-content: flex-end;
+
+      margin-right: 36%;
+    }
+
+    .bottle-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .sec_8 {
+      background-color: var(--five);
+    }
+
+    .gradient_5 {
+      padding: 50px;
+      background-image: linear-gradient(var(--five), var(--six));
+    }
+
+    .people {
+      width: 200%;
+      height: auto;
+    }
+
+    .people:hover {
+      opacity: 0.8;
+    }
+
+    .people-logo {
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    .people-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .sec_9 {
+      background-color: var(--six);
+    }
+
+    .waves {
+      width: 100%;
+      height: auto;
+    }
+
+    .waves:hover {
+      opacity: 0.8;
+    }
+
+    .waves-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       justify-content: center;
     }
   </style>

@@ -6,7 +6,7 @@ import Our_main from "../layouts/Our_main.astro";
 <Our_main>
   <body>
     <h1>About</h1>
-    <img class="arrow" src="../public/img/arrow.svg" alt="" />
+    <img class="arrow" src="/img/arrow-orange.svg" alt="" />
     <section class="grid_1-1 orange">
       <p class="tekst_1">
         Being at KUNE Festival is an immersive experience that blends art, music, and the island’s natural beauty. The location’s secludedness adds to the sense of separation from everyday life. At the same time, the art invites us to engage in open
@@ -65,7 +65,7 @@ import Our_main from "../layouts/Our_main.astro";
       </div>
     </section>
 
-    <br />
+    <img src="/svg/waves-wob.svg" class="waves" alt="" />
   </body>
 </Our_main>
 <style>
@@ -125,6 +125,8 @@ import Our_main from "../layouts/Our_main.astro";
 
   .location {
     background-color: var(--five);
+
+    margin-bottom: 100px;
   }
   h2 {
     text-align: center;
@@ -135,6 +137,11 @@ import Our_main from "../layouts/Our_main.astro";
   .location_tekst {
     width: 90%;
     margin-left: 5%;
+  }
+
+  .waves {
+    width: 100%;
+    height: auto;
   }
 
   @media (max-width: 900px) {

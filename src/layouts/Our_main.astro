@@ -18,7 +18,9 @@ const { title } = Astro.props;
 
   <body data-title={title}>
     <Header />
-    <slot />
+    <main>
+      <slot />
+    </main>
     <Footer />
   </body>
 
@@ -26,10 +28,20 @@ const { title } = Astro.props;
     body[data-title="Kune Festival"] {
       background: var(--one);
     }
+
+    body [data-title="lineup"] {
+      max-width: 1000px;
+    }
     ul {
       display: flex;
       list-style-type: none;
       gap: 1rem;
+    }
+
+    @media (max-width: 1200px) {
+      main > section {
+        margin-inline: 10px;
+      }
     }
   </style>
 </html>

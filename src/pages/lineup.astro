@@ -13,10 +13,470 @@ const options = {
 
 const response = await fetch(url, options);
 const data = await response.json();
-console.log(data);
 
+const friday = data.filter((act) => act.day === "Friday");
+const fridaySpace = friday.filter((act) => act.stage === "Space Stage");
+const fridayVessel = friday.filter((act) => act.stage === "Vessel Stage");
+const fridayAstral = friday.filter((act) => act.stage === "Astral Stage");
+const fridayBeach = friday.filter((act) => act.stage === "Beach Stage");
+const fridayAmphi = friday.filter((act) => act.stage === "Amphi Stage");
+console.log(fridayAmphi);
+
+const sat = data.filter((act) => act.day === "Saturday");
+const satSpace = sat.filter((act) => act.stage === "Space Stage");
+const satVessel = sat.filter((act) => act.stage === "Vessel Stage");
+const satAstral = sat.filter((act) => act.stage === "Astral Stage");
+const satBeach = sat.filter((act) => act.stage === "Beach Stage");
+const satAmphi = sat.filter((act) => act.stage === "Amphi Stage");
+
+const sun = data.filter((act) => act.day === "Sunday");
+const sunSpace = sun.filter((act) => act.stage === "Space Stage");
+const sunVessel = sun.filter((act) => act.stage === "Vessel Stage");
+
+/*
+{
+    id: 45,
+    name: 'Haider',
+    stage: 'Astral Stage',
+    vj: 'Spherical Aberration',
+    time: '02:00:00',
+    day: 'Saturday',
+    'end time': '04:00:00'
+  } */
 import "../styles/global.css";
 import Our_main from "../layouts/Our_main.astro";
+import Button from "../components/Button.astro";
 ---
 
-<Our_main title="KUNE festival" />
+<Our_main title="Lineup">
+  <section class="static">
+    <h1>Lineup</h1>
+    <img src="/img/arrow-orange.svg" class="arrow" alt="" />
+    <h2 class="two">Music</h2>
+  </section>
+  <section class="artist">
+    <article class="three textcolumn">
+      <h3>Friday</h3>
+      <h4>Space Stage</h4>
+    </article>
+    <article class="three">
+      {
+        fridaySpace.map((act) => {
+          return (
+            <>
+              <p>
+                {act.time} {act.endtime} {act.name}
+              </p>
+              <p>●</p>
+            </>
+          );
+        })
+      }
+    </article>
+  </section>
+
+  <section class="artist-margin">
+    <article class="three textcolumn">
+      <h4>Vessel Stage</h4>
+    </article>
+    <article class="three">
+      {
+        fridayVessel.map((act) => {
+          return (
+            <>
+              <p>
+                {act.time} {act.endtime} {act.name}
+              </p>
+              <p>●</p>
+            </>
+          );
+        })
+      }
+    </article>
+  </section>
+
+  <section class="artist-margin">
+    <article class="three textcolumn">
+      <h4>Astral Stage</h4>
+    </article>
+    <article class="three">
+      {
+        fridayAstral.map((act) => {
+          return (
+            <>
+              <p>
+                {act.time} {act.endtime} {act.name}
+              </p>
+              <p>●</p>
+            </>
+          );
+        })
+      }
+    </article>
+  </section>
+
+  <section class="artist-margin">
+    <article class="three textcolumn">
+      <h4>Beach Stage</h4>
+    </article>
+    <article class="three">
+      {
+        fridayBeach.map((act) => {
+          return (
+            <>
+              <p>
+                {act.time} {act.endtime} {act.name}
+              </p>
+              <p>●</p>
+            </>
+          );
+        })
+      }
+    </article>
+  </section>
+
+  <section class="artist-margin">
+    <article class="three textcolumn">
+      <h4>Amphi Stage</h4>
+    </article>
+    <article class="three">
+      {
+        fridayAmphi.map((act) => {
+          return (
+            <>
+              <p>
+                {act.time} {act.endtime} {act.name}
+              </p>
+              <p>●</p>
+            </>
+          );
+        })
+      }
+    </article>
+  </section>
+
+  <section class="artist">
+    <article class="four textcolumn">
+      <h3>Saturday</h3>
+      <h4>Space Stage</h4>
+    </article>
+    <article class="four">
+      {
+        satSpace.map((act) => {
+          return (
+            <>
+              <p>
+                {act.time} {act.endtime} {act.name}
+              </p>
+              <p>●</p>
+            </>
+          );
+        })
+      }
+    </article>
+  </section>
+
+  <section class="artist-margin">
+    <article class="four textcolumn">
+      <h4>Vessel Stage</h4>
+    </article>
+    <article class="four">
+      {
+        satVessel.map((act) => {
+          return (
+            <>
+              <p>
+                {act.time} {act.endtime} {act.name}
+              </p>
+              <p>●</p>
+            </>
+          );
+        })
+      }
+    </article>
+  </section>
+
+  <section class="artist-margin">
+    <article class="four textcolumn">
+      <h4>Astral Stage</h4>
+    </article>
+    <article class="four">
+      {
+        satAstral.map((act) => {
+          return (
+            <>
+              <p>
+                {act.time} {act.endtime} {act.name}
+              </p>
+              <p>●</p>
+            </>
+          );
+        })
+      }
+    </article>
+  </section>
+
+  <section class="artist-margin">
+    <article class="four textcolumn">
+      <h4>Beach Stage</h4>
+    </article>
+    <article class="four">
+      {
+        satBeach.map((act) => {
+          return (
+            <>
+              <p>
+                {act.time} {act.endtime} {act.name}
+              </p>
+              <p>●</p>
+            </>
+          );
+        })
+      }
+    </article>
+  </section>
+
+  <section class="artist-margin">
+    <article class="four textcolumn">
+      <h4>Amphi Stage</h4>
+    </article>
+    <article class="four">
+      {
+        satAmphi.map((act) => {
+          return (
+            <>
+              <p>
+                {act.time} {act.endtime} {act.name}
+              </p>
+              <p>●</p>
+            </>
+          );
+        })
+      }
+    </article>
+  </section>
+
+  <section class="artist">
+    <article class="five textcolumn">
+      <h3>Sunday</h3>
+      <h4>Space Stage</h4>
+    </article>
+    <article class="five">
+      {
+        sunSpace.map((act) => {
+          return (
+            <>
+              <p>
+                {act.time} {act.endtime} {act.name}
+              </p>
+              <p>●</p>
+            </>
+          );
+        })
+      }
+    </article>
+  </section>
+
+  <section class="artist-margin">
+    <article class="five textcolumn">
+      <h4>Vessel Stage</h4>
+    </article>
+    <article class="five">
+      {
+        sunVessel.map((act) => {
+          return (
+            <>
+              <p>
+                {act.time} {act.endtime} {act.name}
+              </p>
+              <p>●</p>
+            </>
+          );
+        })
+      }
+    </article>
+  </section>
+
+  <section class="artist">
+    <article class="six textcolumn">
+      <h2>Visuals</h2>
+    </article>
+    <article class="six tekst">
+      <p>10% Human collective ● AD/DX ● Alex Rosado ● Aural Eye ● DOGON ● Jonas Johansson ● Kristian Nihlen ● PM ● Paketa 12 ● Pleasrue Control ● Speherical Aberation ● TSV ●</p>
+    </article>
+  </section>
+
+  <section class="artist">
+    <article class="seven textcolumn">
+      <h2>Art installation</h2>
+    </article>
+    <article class="seven tekst">
+      <p>B612 ● Circuit Circus ● Daniel Rosca ● Davide Hjort Di Fabio ● Horisontology ● Sancho Sculptures ●</p>
+    </article>
+  </section>
+
+  <section class="artist">
+    <article class="eight textcolumn">
+      <h2>Workshops</h2>
+    </article>
+    <article class="eight tekst">
+      <p>Free writing ● Interactive ai drawing ● Kite building ● Kundalini yoga ● Storytelling act ● Vibroacoustics ● Vinyasa yoga ● yoga & ambient live set ●</p>
+    </article>
+  </section>
+
+  <section class="artist nine">
+    <h2>Registration</h2>
+    <form action="registration_form">
+      <div class="forms">
+        <div class="info">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" />
+          <label for="genre">Music genre:</label>
+          <input type="text" id="genre" name="genre" />
+          <label for="mail">Email address:</label>
+          <input type="text" id="mail" name="mail" />
+        </div>
+        <div class="info">
+          <label for="descrip">Necessary information:</label>
+          <input type="text" id="descrip" name="descrip" />
+        </div>
+      </div>
+      <div class="button">
+        <Button variant="secondary">Submit</Button>
+      </div>
+    </form>
+  </section>
+
+  <img src="/svg/waves-wob.svg" alt="" />
+</Our_main>
+
+<style>
+  article {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+  }
+
+  section {
+    max-width: 1000px;
+    margin-inline: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    color: var(--one);
+  }
+
+  .artist {
+    margin-top: 100px;
+  }
+
+  .artist-margin {
+    margin-top: 50px;
+  }
+
+  .arrow {
+    width: 8%;
+    height: auto;
+
+    margin-bottom: 10%;
+  }
+
+  h4 {
+    text-transform: uppercase;
+  }
+
+  .two {
+    color: var(--two);
+  }
+
+  .three {
+    color: var(--three);
+  }
+
+  .four {
+    color: var(--four);
+  }
+
+  .five {
+    color: var(--five);
+  }
+
+  .six {
+    color: var(--six);
+  }
+
+  .seven {
+    color: var(--seven);
+  }
+
+  .eight {
+    color: var(--eight);
+  }
+
+  .nine {
+    color: var(--nine);
+  }
+  .tekst {
+    text-align: center;
+  }
+
+  .textcolumn {
+    flex-direction: column;
+  }
+
+  .forms {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  label {
+    margin-top: 10px;
+  }
+
+  form {
+    width: 50%;
+    height: auto;
+
+    color: var(--black);
+  }
+
+  form input {
+    border: 2px solid var(--black);
+    height: 40px;
+    border-radius: 5px;
+    background-color: transparent;
+  }
+
+  #descrip {
+    height: 190px;
+  }
+
+  .button {
+    margin-top: 50px;
+
+    display: flex;
+    justify-content: center;
+  }
+
+  form {
+    margin-bottom: 100px;
+  }
+
+  @media (max-width: 820px) {
+    form {
+      width: 60%;
+    }
+  }
+</style>

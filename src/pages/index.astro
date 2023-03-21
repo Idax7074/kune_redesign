@@ -41,24 +41,24 @@ import Button from "../components/Button.astro";
   </section>
 
   <section class="sec_5">
-    <div class="gradient_1"></div>
+    <article class="gradient_1"></article>
     <div class="grid_1-1">
       <div class="ticket-text">
         <h3>Tickets</h3>
         <p>Get your tickets for KUNE festival 2023 here. <i class="fa-solid fa-arrow-right"></i></p>
       </div>
-      <div class="ticket-logo">
+      <article class="ticket-logo">
         <a href="#"><img src="/svg/ticket.svg" class="ticket" alt="" /></a>
-      </div>
+      </article>
     </div>
-    <div class="gradient_2"></div>
+    <article class="gradient_2"></article>
   </section>
 
   <section class="sec_6">
     <div class="grid_1-1">
-      <div class="tent-logo">
+      <article class="tent-logo">
         <a href="#"><img src="/svg/hill-tent.svg" class="tent" alt="" /></a>
-      </div>
+      </article>
       <div class="tent-text">
         <h3>Camping</h3>
         <p>
@@ -68,7 +68,7 @@ import Button from "../components/Button.astro";
         </p>
       </div>
     </div>
-    <div class="gradient_3"></div>
+    <article class="gradient_3"></article>
   </section>
 
   <section class="sec_7">
@@ -80,18 +80,18 @@ import Button from "../components/Button.astro";
           Click on the bottles to read about our rules and values.
         </p>
       </div>
-      <div class="bottle-logo">
+      <article class="bottle-logo">
         <a href="#"><img src="/svg/hill-bottle.svg" class="bottle" alt="" /></a>
-      </div>
+      </article>
     </div>
-    <div class="gradient_4"></div>
+    <article class="gradient_4"></article>
   </section>
 
   <section class="sec_8">
     <div class="grid_1-1">
-      <div class="people-logo">
+      <article class="people-logo">
         <a href="#"><img src="/svg/hill-people.svg" class="people" alt="" /></a>
-      </div>
+      </article>
       <div class="people-text">
         <h3>Volunteer</h3>
         <p>
@@ -100,7 +100,7 @@ import Button from "../components/Button.astro";
         </p>
       </div>
     </div>
-    <div class="gradient_5"></div>
+    <article class="gradient_5"></article>
   </section>
 
   <section class="sec_9">
@@ -114,247 +114,281 @@ import Button from "../components/Button.astro";
       </div>
       <div class=""></div>
     </div>
-    <div class="waves-logo">
+    <article class="waves-logo">
       <a href="#"><img src="/svg/waves.svg" class="waves" alt="" /></a>
-    </div>
+    </article>
   </section>
+</Our_main>
 
-  <style>
-    h1,
-    h2,
-    h3,
-    h4,
-    p {
-      color: var(--cream-white);
-    }
-    .sec_1 {
-      background: var(--one);
-      margin-top: 100px;
+<style>
+  h1,
+  h2,
+  h3,
+  h4,
+  p {
+    color: var(--cream-white);
+  }
+  .sec_1 {
+    background: var(--one);
+    margin-top: 100px;
+  }
+
+  .sun {
+    width: 50%;
+    height: auto;
+  }
+
+  .arrow {
+    width: 100px;
+    height: auto;
+  }
+
+  .arrow-white {
+    width: 70px;
+    height: auto;
+  }
+
+  .container {
+    position: relative;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+  }
+
+  .center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .center-arrow {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .sec_2 {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .sec_2 img {
+    width: 40%;
+    height: auto;
+  }
+
+  .hill-yellow {
+    float: inline-end;
+  }
+
+  .sec_3 {
+    max-width: 800px;
+    margin-inline: auto;
+  }
+
+  .button {
+    text-align: center;
+    margin-block: var(--space-xxl);
+  }
+
+  .arrow-text {
+    display: flex;
+    justify-content: center;
+  }
+  .sec_4 {
+    margin-top: -215px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .sec_4 img {
+    width: 40%;
+    height: auto;
+  }
+
+  .sec_5 {
+    background: var(--two);
+  }
+
+  .gradient_1 {
+    padding: 50px;
+    background-image: linear-gradient(var(--one), var(--two));
+  }
+
+  .gradient_2 {
+    padding: 50px;
+    background-image: linear-gradient(var(--two), var(--three));
+  }
+
+  .grid_1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    margin-inline: auto;
+    padding-block: 20px;
+  }
+
+  .ticket {
+    width: 70%;
+    height: auto;
+  }
+
+  .ticket:hover {
+    opacity: 0.8;
+  }
+
+  .ticket-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .ticket-logo {
+    display: flex;
+    justify-content: center;
+  }
+
+  .sec_6 {
+    background-color: var(--three);
+  }
+
+  .gradient_3 {
+    padding: 50px;
+    background-image: linear-gradient(var(--three), var(--four));
+  }
+
+  .tent {
+    width: 70%;
+    height: auto;
+  }
+
+  .tent:hover {
+    opacity: 0.8;
+  }
+
+  .tent-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sec_7 {
+    background-color: var(--four);
+  }
+
+  .gradient_4 {
+    padding: 50px;
+    background-image: linear-gradient(var(--four), var(--five));
+  }
+
+  .bottle {
+    width: 200%;
+    height: auto;
+  }
+
+  .bottle:hover {
+    opacity: 0.8;
+  }
+
+  .bottle-logo {
+    display: flex;
+    justify-content: flex-end;
+
+    margin-right: 36%;
+  }
+
+  .bottle-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .sec_8 {
+    background-color: var(--five);
+  }
+
+  .gradient_5 {
+    padding: 50px;
+    background-image: linear-gradient(var(--five), var(--six));
+  }
+
+  .people {
+    width: 200%;
+    height: auto;
+  }
+
+  .people:hover {
+    opacity: 0.8;
+  }
+
+  .people-logo {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .people-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .sec_9 {
+    background-color: var(--six);
+  }
+
+  .waves {
+    width: 100%;
+    height: auto;
+  }
+
+  .waves:hover {
+    opacity: 0.8;
+  }
+
+  .waves-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media (max-width: 1200px) {
+    h1 {
+      font-size: 2rem;
     }
 
-    .sun {
-      width: 50%;
-      height: auto;
+    h2 {
+      font-size: 2rem;
     }
 
     .arrow {
-      width: 100px;
-      height: auto;
-    }
-
-    .arrow-white {
-      width: 70px;
-      height: auto;
-    }
-
-    .container {
-      position: relative;
-      text-align: center;
-
-      display: flex;
-      justify-content: center;
-    }
-
-    .center {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-
-    .center-arrow {
-      position: absolute;
-      top: 70%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-
-    .sec_2 {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .sec_2 img {
-      width: 40%;
-      height: auto;
-    }
-
-    .hill-yellow {
-      float: inline-end;
+      width: 50px;
     }
 
     .sec_3 {
-      max-width: 800px;
-      margin-inline: auto;
-    }
-
-    .button {
-      text-align: center;
-      margin-block: var(--space-xxl);
-    }
-
-    .arrow-text {
-      display: flex;
-      justify-content: center;
-    }
-    .sec_4 {
-      margin-top: -215px;
-      display: flex;
-      justify-content: flex-end;
-    }
-    .sec_4 img {
-      width: 40%;
-      height: auto;
-    }
-
-    .sec_5 {
-      background: var(--two);
-    }
-
-    .gradient_1 {
-      padding: 50px;
-      background-image: linear-gradient(var(--one), var(--two));
-    }
-
-    .gradient_2 {
-      padding: 50px;
-      background-image: linear-gradient(var(--two), var(--three));
-    }
-
-    .grid_1-1 {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-
-      margin-inline: auto;
-      padding-block: 20px;
-    }
-
-    .ticket {
-      width: 70%;
-      height: auto;
-    }
-
-    .ticket:hover {
-      opacity: 0.8;
-    }
-
-    .ticket-text {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .ticket-logo {
-      display: flex;
-      justify-content: center;
-    }
-
-    .sec_6 {
-      background-color: var(--three);
-    }
-
-    .gradient_3 {
-      padding: 50px;
-      background-image: linear-gradient(var(--three), var(--four));
-    }
-
-    .tent {
-      width: 70%;
-      height: auto;
-    }
-
-    .tent:hover {
-      opacity: 0.8;
-    }
-
-    .tent-text {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .sec_7 {
-      background-color: var(--four);
-    }
-
-    .gradient_4 {
-      padding: 50px;
-      background-image: linear-gradient(var(--four), var(--five));
+      max-width: 600px;
     }
 
     .bottle {
-      width: 200%;
-      height: auto;
-    }
-
-    .bottle:hover {
-      opacity: 0.8;
+      width: 120%;
     }
 
     .bottle-logo {
-      display: flex;
-      justify-content: flex-end;
-
-      margin-right: 36%;
-    }
-
-    .bottle-text {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .sec_8 {
-      background-color: var(--five);
-    }
-
-    .gradient_5 {
-      padding: 50px;
-      background-image: linear-gradient(var(--five), var(--six));
+      margin-right: 15%;
     }
 
     .people {
-      width: 200%;
-      height: auto;
+      width: 120%;
     }
 
-    .people:hover {
-      opacity: 0.8;
+    div {
+      margin-inline: 10px;
     }
-
-    .people-logo {
-      display: flex;
-      justify-content: flex-start;
-    }
-
-    .people-text {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .sec_9 {
-      background-color: var(--six);
-    }
-
-    .waves {
-      width: 100%;
-      height: auto;
-    }
-
-    .waves:hover {
-      opacity: 0.8;
-    }
-
-    .waves-text {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-  </style>
-</Our_main>
+  }
+</style>

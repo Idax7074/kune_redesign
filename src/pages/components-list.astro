@@ -8,26 +8,10 @@ import Button from "../components/Button.astro";
 import Footer from "../components/Footer.astro";
 ---
 
-<div class="header">
-  <h3>Header</h3>
-  <Header />
-</div>
-<div class="logo">
-  <h3>Logo</h3>
-  <Logo />
-</div>
+<Header />
+<Logo />
 <NavIcons />
 <Button variant="primary" />
 <Button variant="secondary" />
 <Button variant="tertiary" />
 <Footer />
-
-<style>
-  h3 {
-    text-align: center;
-    color: var(--one);
-  }
-  .header {
-    margin-inline: auto;
-  }
-</style>

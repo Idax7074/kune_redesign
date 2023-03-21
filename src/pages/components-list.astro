@@ -1,0 +1,33 @@
+---
+import "../styles/global.css";
+import Our_main from "../layouts/Our_main.astro";
+import Header from "../components/Header.astro";
+import Logo from "../components/Logo.astro";
+import NavIcons from "../components/NavIcons.astro";
+import Button from "../components/Button.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<div class="header">
+  <h3>Header</h3>
+  <Header />
+</div>
+<div class="logo">
+  <h3>Logo</h3>
+  <Logo />
+</div>
+<NavIcons />
+<Button variant="primary" />
+<Button variant="secondary" />
+<Button variant="tertiary" />
+<Footer />
+
+<style>
+  h3 {
+    text-align: center;
+    color: var(--one);
+  }
+  .header {
+    margin-inline: auto;
+  }
+</style>
